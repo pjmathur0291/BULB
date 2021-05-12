@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULB</title>
+    <style>
+        .main{
+            width: 450px;
+            height: 300px;
+            margin: auto;
+            margin-top: 28px;
+        }
+        .on{
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: lightgrey;
+            text-align: center;
+            font-family: arial;
+            /* padding-top: 82px; */
+            box-sizing: border-box;
+            cursor: pointer;
+            box-shadow: -5px 1px 8px black;
+        }
+        .off{
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: lightskyblue;
+            text-align: center;
+            font-family: arial;
+            /* padding-top: 82px; */
+            cursor: pointer;
+            box-sizing: border-box;
+            /* box-shadow: 6px 3px 8px black; */
+            box-shadow: -5px 1px 8px black;
+            margin-left: 10px;
+        }
+        .bulb{
+            margin-top: 50px;
+            margin-left: 115px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button class="on" id="switchon">ON</button>
+        <button class="off" id="switchoff">OFF</button>
+        <div id="on_off">
+            <img src="bulb_off.jpeg" id="bulb1" class="bulb" width="150" height="250" alt="off bulb" />
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        var bulb1 = $("#bulb1");
+
+        $("#switchon").click(
+            function () {
+                bulb1.attr('src', 'bulb_on.jpeg');
+            },
+        );
+            $("#switchoff").click(
+            function () {
+                bulb1.attr('src', 'bulb_off.jpeg');
+            }
+
+        );
+    </script>
+</body>
+</html>
